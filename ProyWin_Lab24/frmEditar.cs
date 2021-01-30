@@ -20,8 +20,8 @@ namespace ProyWin_Lab24
 
         public void CargarCurso(Curso cursoAEditar)
         {
-            if (cursoAEditar.Nombre.Length > 20)
-                txtNombre.Text = cursoAEditar.Nombre.Substring(0, 20);
+            if (cursoAEditar.Nombre.Length > 25)
+                txtNombre.Text = cursoAEditar.Nombre.Substring(0, 25);
             else
                 txtNombre.Text = cursoAEditar.Nombre;
             txtDuracion.Text = cursoAEditar.Duracion.ToString();
