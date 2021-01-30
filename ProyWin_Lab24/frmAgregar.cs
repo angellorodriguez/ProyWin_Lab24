@@ -19,6 +19,7 @@ namespace ProyWin_Lab24
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Estas accediendo a la ventana para crear un nuevo registro de Curso");
             Curso miNuevoCurso = new Curso();
 
             miNuevoCurso.Nombre = txtNombre.Text;

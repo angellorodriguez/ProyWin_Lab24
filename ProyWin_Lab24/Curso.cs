@@ -30,5 +30,9 @@ namespace ProyWin_Lab24
             get { return varDescripcion; }
         }
 
+        public void Saludar()
+        {
+            Console.WriteLine("Hola desde GitHub");
+        }
     }
 }
