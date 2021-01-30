@@ -20,7 +20,10 @@ namespace ProyWin_Lab24
 
         public void CargarCurso(Curso cursoAEditar)
         {
-            txtNombre.Text = cursoAEditar.Nombre;
+            if (cursoAEditar.Nombre.Length > 25)
+                txtNombre.Text = cursoAEditar.Nombre.Substring(0, 25);
+            else
+                txtNombre.Text = cursoAEditar.Nombre;
             txtDuracion.Text = cursoAEditar.Duracion.ToString();
             txtDescripcion.Text = cursoAEditar.Descripcion;
         }
@@ -36,7 +39,7 @@ namespace ProyWin_Lab24
             int resultadoEditando =miConexion.CursoEditar(miCursoAEditar);
             if (resultadoEditando == 1)
             {
-                MessageBox.Show("Curso actualizado exitosamente.");
+                MessageBox.Show("El curso se ha modificado exitosamente.");
             }
             else
             {
